@@ -1,5 +1,4 @@
 function areaChart(dataSet = [], labels = [], graphIndex,id) {
-  console.log(dataSet);
   /* ChartJS
    * -------
    * Here we will create a few charts using ChartJS

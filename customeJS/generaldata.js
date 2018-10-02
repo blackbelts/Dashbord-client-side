@@ -80,44 +80,43 @@ $(function () {
         .catch(function (error) {
           console.log(error)
         })
+      ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("type", "%3D", "lead")], [], [])
+        .then(function (re) {
+          $("#leads p strong").get(0).append(re);
+          setValues("#leads", "crm.lead", "search_read", re, [new Domain("type", "%3D", "lead")], [new Map("fields", ["planned_revenue"])], [], ['#leadlineChart', '#leadpieChart', '#leadbarChart', '#leadplineChart', '#leadppieChart', '#leadpbarChart', '#leadalineChart', '#leadapieChart', '#leadabarChart', '#leadapalineChart', '#leadapapieChart', '#leadapabarChart', '#leadacalineChart', '#leadacapieChart', '#leadacabarChart'])
+
+        })
+      ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "New"), new Domain("type", "%3D", "opportunity")], [], [])
+        .then(function (re) {
+          $("#new p strong").get(0).append(re);
+          setValues("#new", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "New"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [], ['#newlineChart', '#newpieChart', '#newbarChart', '#newplineChart', '#newppieChart', '#newpbarChart', '#newalineChart', '#newapieChart', '#newabarChart', '#newapalineChart', '#newapapieChart', '#newapabarChart', '#newacalineChart', '#newacapieChart', '#newacabarChart'])
+        })
+      ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "Qualified"), new Domain("type", "%3D", "opportunity")], [], [])
+        .then(function (re) {
+          $("#proposal p strong").get(0).append(re);
+          setValues("#proposal", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "Qualified"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [], ['#proposallineChart', '#proposalpieChart', '#proposalbarChart', '#proposalplineChart', '#proposalppieChart', '#proposalpbarChart', '#proposalalineChart', '#proposalapieChart', '#proposalabarChart', '#proposalapalineChart', '#proposalapapieChart', '#proposalapabarChart', '#proposalacalineChart', '#proposalacapieChart', '#proposalacabarChart'])
+        })
+      ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "Proposition"), new Domain("type", "%3D", "opportunity")], [], [])
+        .then(function (re) {
+          $("#uw p strong").get(0).append(re);
+          setValues("#uw", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "Proposition"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [], ['#uwlineChart', '#uwpieChart', '#uwbarChart', '#uwplineChart', '#uwppieChart', '#uwpbarChart', '#uwalineChart', '#uwapieChart', '#uwabarChart', '#uwapalineChart', '#uwapapieChart', '#uwapabarChart', '#uwacalineChart', '#uwacapieChart', '#uwacabarChart'])
+        })
+      ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "Won"), new Domain("type", "%3D", "opportunity")], [], [])
+        .then(function (re) {
+          $("#won p strong").get(0).append(re);
+          setValues("#won", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "Won"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [], ['#wonlineChart', '#wonpieChart', '#wonbarChart', '#wonplineChart', '#wonppieChart', '#wonpbarChart', '#wonalineChart', '#wonapieChart', '#wonabarChart', '#wonapalineChart', '#wonapapieChart', '#wonapabarChart', '#wonacalineChart', '#wonacapieChart', '#wonacabarChart'])
+        })
+      ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("active", "!%3D", "true")], [], [])
+        .then(function (re) {
+          $("#lost p strong").get(0).append(re);
+          setValues("#lost", "crm.lead", "search_read", re, [new Domain("active", "!%3D", "true")], [new Map("fields", ["planned_revenue"])], [], ['#lostlineChart', '#lostpieChart', '#lostbarChart', '#lostplineChart', '#lostppieChart', '#lostpbarChart', '#lostalineChart', '#lostapieChart', '#lostabarChart', '#lostapalineChart', '#lostapapieChart', '#lostapabarChart', '#lostacalineChart', '#lostacapieChart', '#lostacabarChart'])
+        })
+
     })
     //for error in result
     .catch(function (error) {
       console.log(error)
     })
-  ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("type", "%3D", "lead")], [], [])
-    .then(function (re) {
-      $("#leads p strong").get(0).append(re);
-      setValues("#leads", "crm.lead", "search_read", re, [new Domain("type", "%3D", "lead")], [new Map("fields", ["planned_revenue"])], [], ['#leadlineChart', '#leadpieChart', '#leadbarChart'])
-
-    })
-  ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "New"), new Domain("type", "%3D", "opportunity")], [], [])
-    .then(function (re) {
-      $("#new p strong").get(0).append(re);
-      setValues("#new", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "New"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [],['#newlineChart', '#newpieChart', '#newbarChart'])
-    })
-  ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "Qualified"), new Domain("type", "%3D", "opportunity")], [], [])
-    .then(function (re) {
-      $("#proposal p strong").get(0).append(re);
-      setValues("#proposal", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "Qualified"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [],['#proposallineChart', '#proposalpieChart', '#proposalbarChart'])
-    })
-  ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "Proposition"), new Domain("type", "%3D", "opportunity")], [], [])
-    .then(function (re) {
-      $("#uw p strong").get(0).append(re);
-      setValues("#uw", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "Proposition"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [],['#uwlineChart', '#uwpieChart', '#uwbarChart'])
-    })
-  ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("stage_id", "%3D", "Won"), new Domain("type", "%3D", "opportunity")], [], [])
-    .then(function (re) {
-      $("#won p strong").get(0).append(re);
-      setValues("#won", "crm.lead", "search_read", re, [new Domain("stage_id", "%3D", "Won"), new Domain("type", "%3D", "opportunity")], [new Map("fields", ["planned_revenue"])], [],['#wonlineChart', '#wonpieChart', '#wonbarChart'])
-    })
-  ajaxRequest(uid, password, "crm.lead", "search_count", [new Domain("active", "!%3D", "true")], [], [])
-    .then(function (re) {
-      $("#lost p strong").get(0).append(re);
-      setValues("#lost", "crm.lead", "search_read", re, [new Domain("active", "!%3D", "true")], [new Map("fields", ["planned_revenue"])], [],['#lostlineChart', '#lostpieChart', '#lostbarChart'])
-
-    })
-
 })
 
 function setValues(id, modal, method, re, domains = [], maps = [], monthes = [], canvasId = []) {
@@ -134,6 +133,7 @@ function setValues(id, modal, method, re, domains = [], maps = [], monthes = [],
       })
       monthesNamelsit.splice(0, 1);
       var dS = [];
+      //get count graph data
       ajaxRequest(uid, password, modal, "search_count", domains, [], monthes)
         .then(function (response) {
           console.log(response);
@@ -145,6 +145,42 @@ function setValues(id, modal, method, re, domains = [], maps = [], monthes = [],
         })
         .catch(function (error) {
           console.log(error)
+        })
+      var montelyPre = [],
+        ava = [],
+        apa = [],
+        aca = [],
+        sumPre = 0;
+      ajaxRequest(uid, password, modal, "search_read", domains, maps, monthes)
+        .then(function (res = []) {
+          res.forEach(function (item) {
+            sumPre = 0;
+            JSON.parse(item).forEach(function (item2) {
+              sumPre += item2.planned_revenue;
+            })
+            if (JSON.parse(item).length == 0) {
+              ava.push(0);
+              aca.push(0);
+            } else {
+              ava.push((sumPre / JSON.parse(item).length).toFixed(2));
+              aca.push((JSON.parse(item).length / agentsNumber).toFixed(2))
+            }
+            apa.push((sumPre / agentsNumber).toFixed(2))
+            montelyPre.push(sumPre);
+          })
+          console.log(id);
+          graphlist.push(areaChart([montelyPre], monthesNamelsit, graphlist.length, canvasId[3]));
+          graphlist.push(donut(montelyPre, monthesNamelsit, graphlist.length, canvasId[4]));
+          graphlist.push(barChart([montelyPre], monthesNamelsit, graphlist.length, canvasId[5]));
+          graphlist.push(areaChart([ava], monthesNamelsit, graphlist.length, canvasId[6]));
+          graphlist.push(donut(ava, monthesNamelsit, graphlist.length, canvasId[7]));
+          graphlist.push(barChart([ava], monthesNamelsit, graphlist.length, canvasId[8]));
+          graphlist.push(areaChart([apa], monthesNamelsit, graphlist.length, canvasId[9]));
+          graphlist.push(donut(apa, monthesNamelsit, graphlist.length, canvasId[10]));
+          graphlist.push(barChart([apa], monthesNamelsit, graphlist.length, canvasId[11]));
+          graphlist.push(areaChart([aca], monthesNamelsit, graphlist.length, canvasId[12]));
+          graphlist.push(donut(aca, monthesNamelsit, graphlist.length, canvasId[13]));
+          graphlist.push(barChart([aca], monthesNamelsit, graphlist.length, canvasId[14]));
         })
     })
 }

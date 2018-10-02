@@ -44,6 +44,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   .box-header>.fa, .box-header>.glyphicon, .box-header>.ion, .box-header .box-title{
     font-size: 16px;
   }
+  @media (min-width: 768px){
+  .sidebar-mini.sidebar-collapse .main-sidebar{
+    position: fixed;
+  }
+}
+.main-header {
+  position: fixed;
+}
   </style>
 </head>
 <!--
@@ -67,7 +75,7 @@ desired effect
 |---------------------------------------------------------|
 -->
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
   <div class="wrapper">
 
     <!-- Main Header -->
@@ -87,159 +95,7 @@ desired effect
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
           <span class="sr-only">Toggle navigation</span>
         </a>
-        <!-- Navbar Right Menu -->
-        <div class="navbar-custom-menu">
-          <ul class="nav navbar-nav">
-            <!-- Messages: style can be found in dropdown.less-->
-            <li class="dropdown messages-menu">
-              <!-- Menu toggle button -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-envelope-o"></i>
-                <span class="label label-success">4</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="header">You have 4 messages</li>
-                <li>
-                  <!-- inner menu: contains the messages -->
-                  <ul class="menu">
-                    <li>
-                      <!-- start message -->
-                      <a href="#">
-                        <div class="pull-left">
-                          <!-- User Image -->
-                          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                        </div>
-                        <!-- Message title and timestamp -->
-                        <h4>
-                          Support Team
-                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                        </h4>
-                        <!-- The message -->
-                        <p>Why not buy a new awesome theme?</p>
-                      </a>
-                    </li>
-                    <!-- end message -->
-                  </ul>
-                  <!-- /.menu -->
-                </li>
-                <li class="footer"><a href="#">See All Messages</a></li>
-              </ul>
-            </li>
-            <!-- /.messages-menu -->
-
-            <!-- Notifications Menu -->
-            <li class="dropdown notifications-menu">
-              <!-- Menu toggle button -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-bell-o"></i>
-                <span class="label label-warning">10</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="header">You have 10 notifications</li>
-                <li>
-                  <!-- Inner Menu: contains the notifications -->
-                  <ul class="menu">
-                    <li>
-                      <!-- start notification -->
-                      <a href="#">
-                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                      </a>
-                    </li>
-                    <!-- end notification -->
-                  </ul>
-                </li>
-                <li class="footer"><a href="#">View all</a></li>
-              </ul>
-            </li>
-            <!-- Tasks Menu -->
-            <li class="dropdown tasks-menu">
-              <!-- Menu Toggle Button -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-flag-o"></i>
-                <span class="label label-danger">9</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="header">You have 9 tasks</li>
-                <li>
-                  <!-- Inner menu: contains the tasks -->
-                  <ul class="menu">
-                    <li>
-                      <!-- Task item -->
-                      <a href="#">
-                        <!-- Task title and progress text -->
-                        <h3>
-                          Design some buttons
-                          <small class="pull-right">20%</small>
-                        </h3>
-                        <!-- The progress bar -->
-                        <div class="progress xs">
-                          <!-- Change the css width attribute to simulate progress -->
-                          <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                            <span class="sr-only">20% Complete</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <!-- end task item -->
-                  </ul>
-                </li>
-                <li class="footer">
-                  <a href="#">View all tasks</a>
-                </li>
-              </ul>
-            </li>
-            <!-- User Account Menu -->
-            <li class="dropdown user user-menu">
-              <!-- Menu Toggle Button -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <!-- The user image in the navbar-->
-                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
-              </a>
-              <ul class="dropdown-menu">
-                <!-- The user image in the menu -->
-                <li class="user-header">
-                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                  <p>
-                    Alexander Pierce - Web Developer
-                    <small>Member since Nov. 2012</small>
-                  </p>
-                </li>
-                <!-- Menu Body -->
-                <li class="user-body">
-                  <div class="row">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Friends</a>
-                    </div>
-                  </div>
-                  <!-- /.row -->
-                </li>
-                <!-- Menu Footer-->
-                <li class="user-footer">
-                  <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  </div>
-                  <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <!-- Control Sidebar Toggle Button -->
-            <li>
-              <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-            </li>
-          </ul>
-        </div>
+    
       </nav>
     </header>
     <!-- Left side column. contains the logo and sidebar -->
@@ -315,7 +171,7 @@ desired effect
         | Your Page Content Here |
         -------------------------->
         <div class="row">
-          <div class="col-md-3 col-sm-12 col-xs-12">
+          <div class="col-md-3">
             <div class="info-box">
               <span class="info-box-icon bg-aqua"><i class=" fa fa-institution"></i></span>
               <div class="info-box-content">
@@ -403,7 +259,7 @@ desired effect
                 <li class="active"><a href="#lead-line-chart" data-toggle="tab">Line</a></li>
                 <li><a href="#lead-donut-chart" data-toggle="tab">Donut</a></li>
                 <li><a href="#lead-bar-chart" data-toggle="tab">Bar</a></li>
-                <li class="pull-left header"> Leads</li>
+                <li class="pull-left header"> Leads (Count Graph)</li>
               </ul>
               <div class="tab-content no-padding">
                 <!-- Morris chart - Sales -->
@@ -434,6 +290,190 @@ desired effect
                     <div class="box-body">
                       <div class="chart">
                         <canvas id="leadbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lead-P-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lead-P-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lead-p-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> Leads (Premiums Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lead-P-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadplineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lead-P-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadppieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lead-p-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadpbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lead-a-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lead-a-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lead-a-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> Leads (Avg Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lead-a-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lead-a-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lead-a-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lead-apa-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lead-apa-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lead-apa-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> Leads (Avg Prem/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lead-apa-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadapalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lead-apa-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadapapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lead-apa-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadapabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lead-aca-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lead-aca-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lead-aca-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> Leads (Avg Count/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lead-aca-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadacalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lead-aca-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadacapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lead-aca-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="leadacabarChart" style="height:270px"></canvas>
                       </div>
                     </div>
                     <!-- /.box-body -->
@@ -511,6 +551,190 @@ desired effect
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#new-P-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#new-P-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#new-p-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> news (Premiums Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="new-P-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newplineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="new-P-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newppieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="new-p-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newpbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#new-a-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#new-a-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#new-a-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> news (Avg Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="new-a-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="new-a-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="new-a-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#new-apa-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#new-apa-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#new-apa-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> news (Avg Prem/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="new-apa-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newapalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="new-apa-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newapapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="new-apa-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newapabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#new-aca-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#new-aca-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#new-aca-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> news (Avg Count/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="new-aca-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newacalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="new-aca-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newacapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="new-aca-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="newacabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-md-3">
             <div class="box box-info box-solid">
               <div class="box-header with-border">
@@ -579,6 +803,190 @@ desired effect
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#proposal-P-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#proposal-P-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#proposal-p-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> proposals (Premiums Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="proposal-P-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalplineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="proposal-P-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalppieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="proposal-p-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalpbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#proposal-a-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#proposal-a-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#proposal-a-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> proposals (Avg Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="proposal-a-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="proposal-a-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="proposal-a-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#proposal-apa-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#proposal-apa-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#proposal-apa-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> proposals (Avg Prem/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="proposal-apa-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalapalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="proposal-apa-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalapapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="proposal-apa-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalapabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#proposal-aca-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#proposal-aca-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#proposal-aca-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> proposals (Avg Count/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="proposal-aca-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalacalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="proposal-aca-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalacapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="proposal-aca-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="proposalacabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-md-3">
             <div class="box box-info box-solid">
               <div class="box-header with-border">
@@ -609,7 +1017,7 @@ desired effect
                 <li class="active"><a href="#uw-line-chart" data-toggle="tab">Line</a></li>
                 <li><a href="#uw-donut-chart" data-toggle="tab">Donut</a></li>
                 <li><a href="#uw-bar-chart" data-toggle="tab">Bar</a></li>
-                <li class="pull-left header"><i class="fa fa-institution"></i> Agents</li>
+                <li class="pull-left header">Opportnuities (U/W Stage) (count Graph)</li>
               </ul>
               <div class="tab-content no-padding">
                 <!-- Morris chart - Sales -->
@@ -648,6 +1056,190 @@ desired effect
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#uw-P-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#uw-P-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#uw-p-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> uws (Premiums Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="uw-P-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwplineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="uw-P-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwppieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="uw-p-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwpbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#uw-a-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#uw-a-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#uw-a-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> uws (Avg Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="uw-a-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="uw-a-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="uw-a-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#uw-apa-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#uw-apa-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#uw-apa-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> uws (Avg Prem/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="uw-apa-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwapalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="uw-apa-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwapapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="uw-apa-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwapabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#uw-aca-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#uw-aca-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#uw-aca-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> uws (Avg Count/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="uw-aca-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwacalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="uw-aca-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwacapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="uw-aca-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="uwacabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-md-3">
             <div class="box box-info box-solid">
               <div class="box-header with-border">
@@ -672,51 +1264,235 @@ desired effect
             <!-- /.box -->
           </div>
           <div class="col-md-9">
-              <div class="nav-tabs-custom">
-                <!-- Tabs within a box -->
-                <ul class="nav nav-tabs pull-right">
-                  <li class="active"><a href="#won-line-chart" data-toggle="tab">Line</a></li>
-                  <li><a href="#won-donut-chart" data-toggle="tab">Donut</a></li>
-                  <li><a href="#won-bar-chart" data-toggle="tab">Bar</a></li>
-                  <li class="pull-left header"><i class="fa fa-institution"></i> Agents</li>
-                </ul>
-                <div class="tab-content no-padding">
-                  <!-- Morris chart - Sales -->
-                  <div class="chart tab-pane active" id="won-line-chart" style="position: relative; height: 300px;">
-                    <!-- AREA CHART -->
-                    <div class="box">
-                      <div class="box-body">
-                        <div class="chart">
-                          <canvas id="wonlineChart" style="height:270px"></canvas>
-                        </div>
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#won-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#won-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#won-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"><i class="fa fa-institution"></i> Agents</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="won-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonlineChart" style="height:270px"></canvas>
                       </div>
-                      <!-- /.box-body -->
                     </div>
-                    <!-- /.box -->
+                    <!-- /.box-body -->
                   </div>
-                  <div class="chart tab-pane" id="won-donut-chart" style="position: relative; height: 300px;">
-                    <div class="box">
-                      <div class="box-body">
-                        <div class="chart">
-                          <canvas id="wonpieChart" style="height:270px"></canvas>
-                        </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="won-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonpieChart" style="height:270px"></canvas>
                       </div>
-                      <!-- /.box-body -->
                     </div>
+                    <!-- /.box-body -->
                   </div>
-                  <div class="chart tab-pane" id="won-bar-chart" style="position: relative; height: 300px;">
-                    <div class="box">
-                      <div class="box-body">
-                        <div class="chart">
-                          <canvas id="wonbarChart" style="height:270px"></canvas>
-                        </div>
+                </div>
+                <div class="chart tab-pane" id="won-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonbarChart" style="height:270px"></canvas>
                       </div>
-                      <!-- /.box-body -->
                     </div>
+                    <!-- /.box-body -->
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#won-P-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#won-P-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#won-p-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> wons (Premiums Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="won-P-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonplineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="won-P-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonppieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="won-p-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonpbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#won-a-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#won-a-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#won-a-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> wons (Avg Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="won-a-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="won-a-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="won-a-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#won-apa-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#won-apa-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#won-apa-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> wons (Avg Prem/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="won-apa-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonapalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="won-apa-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonapapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="won-apa-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonapabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#won-aca-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#won-aca-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#won-aca-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> wons (Avg Count/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="won-aca-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonacalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="won-aca-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonacapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="won-aca-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="wonacabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-md-3">
             <div class="box box-info box-solid">
               <div class="box-header with-border">
@@ -778,6 +1554,190 @@ desired effect
                     <div class="box-body">
                       <div class="chart">
                         <canvas id="lostbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lost-P-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lost-P-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lost-p-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> losts (Premiums Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lost-P-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostplineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lost-P-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostppieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lost-p-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostpbarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lost-a-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lost-a-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lost-a-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> losts (Avg Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lost-a-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lost-a-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lost-a-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lost-apa-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lost-apa-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lost-apa-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> losts (Avg Prem/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lost-apa-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostapalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lost-apa-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostapapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lost-apa-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostapabarChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="nav-tabs-custom">
+              <!-- Tabs within a box -->
+              <ul class="nav nav-tabs pull-right">
+                <li class="active"><a href="#lost-aca-line-chart" data-toggle="tab">Line</a></li>
+                <li><a href="#lost-aca-donut-chart" data-toggle="tab">Donut</a></li>
+                <li><a href="#lost-aca-bar-chart" data-toggle="tab">Bar</a></li>
+                <li class="pull-left header"> losts (Avg Count/Agent Graph)</li>
+              </ul>
+              <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="lost-aca-line-chart" style="position: relative; height: 300px;">
+                  <!-- AREA CHART -->
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostacalineChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+                <div class="chart tab-pane" id="lost-aca-donut-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostacapieChart" style="height:270px"></canvas>
+                      </div>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                </div>
+                <div class="chart tab-pane" id="lost-aca-bar-chart" style="position: relative; height: 300px;">
+                  <div class="box">
+                    <div class="box-body">
+                      <div class="chart">
+                        <canvas id="lostacabarChart" style="height:270px"></canvas>
                       </div>
                     </div>
                     <!-- /.box-body -->
